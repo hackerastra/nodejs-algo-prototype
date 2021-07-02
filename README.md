@@ -8,4 +8,4 @@
 
 #3. execute command node server
 
-#4. execute sh ./test-rest-apis/restAPIsTest.sh
+#4. execute ./test-rest-apis/restAPIsTest.sh
