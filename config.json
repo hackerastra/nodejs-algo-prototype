@@ -1,0 +1,10 @@
+{
+    "email-id": "jissuman2017@gmail.com",
+    "email-pass":"jissuman@2013",
+    "service": "gmail",
+    "port" : 5000,
+    "collector1-emailAddress" : "",
+    "collector2-emailAddress" : "",
+    "collector3-emailAddress" : "",
+    "collector4-emailAddress" : ""
+}
