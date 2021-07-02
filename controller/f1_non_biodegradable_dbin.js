@@ -15,7 +15,6 @@ const transporter = nodemailer.createTransport({
     text: 'Please Reach Out To Apartment, XYZ - Floor 1 For Collection Of Wastage @ c/o Non Biodegradable Dustbin.'
   };
 exports.f1_nbController = function(req,res,next){
-     var flagForEmailSent;
      for(var g0_nbio = 1;g0_nbio<=10;g0_nbio++){   
              //considering 70% of wastage as threshold value.        
              if(g0_nbio == 7)
