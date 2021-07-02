@@ -22,7 +22,7 @@ function f2_nb(){
 }
  
 function f2_b(){ 
-  curl http://localhost:5000/api/v1/f0_biodegradable_dbin
+  curl http://localhost:5000/api/v1/f2_biodegradable_dbin
 }
 
 function f3_nb(){ 
@@ -30,7 +30,7 @@ function f3_nb(){
 }
  
 function f3_b(){ 
-  curl http://localhost:5000/api/v1/f0_biodegradable_dbin
+  curl http://localhost:5000/api/v1/f3_biodegradable_dbin
 }
 
 
