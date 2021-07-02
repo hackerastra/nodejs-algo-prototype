@@ -34,7 +34,6 @@ exports.f3_nbController = function(req,res,next){
              }
              else
              {
-                 console.log("FIlled %age =" + g0_nbio*10)
                  g0_nbio+1;
              }
      }

@@ -30,7 +30,6 @@ exports.f2_bController = function(req,res,next){
              }
              else
              {
-                 console.log("FIlled %age =" + g0_bio*10)
                  g0_bio+1;
              }
      }
