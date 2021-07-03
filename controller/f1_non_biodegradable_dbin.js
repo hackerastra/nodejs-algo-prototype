@@ -1,20 +1,25 @@
-const nodemailer = require('nodemailer');
-const config = require('../config.json')
-const transporter = nodemailer.createTransport({
-    service: config.service,
-    auth: {
-      user: config["email-id"],
-      pass: config["email-pass"]
+const nodemailer = require('nodemailer'),
+     config = require('../config.json'),
+     distance = require('../_helpers/_helpers_distance'),
+     assignGC = require('../_helpers/_helpers_assignGarbageCollector'),
+     transporter = nodemailer.createTransport({
+      service: config.service,
+        auth: {
+          user: config["email-id"],
+          pass: config["email-pass"]
     }
   });
 
-  var mailOptions = {
-    from: config["email-id"],
-    to: 'som.brata@gmail.com',
-    subject: 'Peak Value for Floor 1 - Non Biodegradable Dustbin Reached',
-    text: 'Please Reach Out To Apartment, XYZ - Floor 1 For Collection Of Wastage @ c/o Non Biodegradable Dustbin.'
-  };
-exports.f1_nbController = function(req,res,next){
+ 
+exports.f1_nbController = async function(req,res,next){
+    let recipientEmailAddress = await assignGC.assignedGC();
+    let dist = await distance.distance() 
+    var mailOptions = {
+      from: config["email-id"],
+      to: recipientEmailAddress,
+      subject: 'Peak Value for Floor 1 - Building XYZ , Landmark ABC, City : ### - Non Biodegradable Dustbin Reached',
+      text: 'Please Reach Out To Apartment, XYZ - Floor 1 For Collection Of Wastage @ c/o Non Biodegradable Dustbin.'+ 'Distance From Your Location To Appartment Is: ' + dist + 'km.' 
+    };
      for(var g0_nbio = 1;g0_nbio<=10;g0_nbio++){   
              //considering 70% of wastage as threshold value.        
              if(g0_nbio == 7)
