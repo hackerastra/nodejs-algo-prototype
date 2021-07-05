@@ -6,6 +6,6 @@
 
 #2. Load All the dependencies : using command - npm install --save or sudo npm install --save
 
-#3. execute command node app
+#3. execute command node app.js
 
 #4. execute ./test-rest-apis/restAPIsTest.sh
